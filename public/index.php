@@ -4,7 +4,7 @@ require '../vendor/autoload.php';
 define('ROOT_DIR', __DIR__ . '/..');
 define('APP_DIR', ROOT_DIR . '/application');
 
-// PSR-4 стандартный автолоадер всего что внутри application
+// PSR-4 СЃС‚Р°РЅРґР°СЂС‚РЅС‹Р№ Р°РІС‚РѕР»РѕР°РґРµСЂ РІСЃРµРіРѕ С‡С‚Рѕ РІРЅСѓС‚СЂРё application
 require 'autoload.php';
 
 $config = require APP_DIR . '/config/development.php';
@@ -13,7 +13,7 @@ $app = new \Slim\Slim($config);
 
 $routes = require APP_DIR . '/routes/routes.php';
 
-// Регистрируем роуты. Ваще надо бы вынести в какой-нибудь Router
+// Р РµРіРёСЃС‚СЂРёСЂСѓРµРј СЂРѕСѓС‚С‹. Р’Р°С‰Рµ РЅР°РґРѕ Р±С‹ РІС‹РЅРµСЃС‚Рё РІ РєР°РєРѕР№-РЅРёР±СѓРґСЊ Router
 foreach($routes as $route) {
     $method = $route[0];
     $routeString = $route[1];
