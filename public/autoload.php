@@ -26,8 +26,6 @@ spl_autoload_register(function ($class) {
     // на разделители директорий в относительном имени класса, добавляем .php
     $file = $base_dir . DIRECTORY_SEPARATOR . str_replace('\\', '/', $relative_class) . '.php';
 
-    //var_dump($file);
-
     // если файл существует, подключаем его
     if (file_exists($file)) {
         require $file;

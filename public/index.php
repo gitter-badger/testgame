@@ -15,7 +15,7 @@ $routes = require APP_DIR . '/routes/routes.php';
 
 // Регистрируем роуты. Ваще надо бы вынести в какой-нибудь Router
 foreach($routes as $route) {
-    $method = $route[0];
+    $httpMethod = $route[0];
     $routeString = $route[1];
     $controller = $route[2];
     $action = $route[3];
@@ -25,7 +25,7 @@ foreach($routes as $route) {
     $callable = [$controllerObject, $action];
 
     if(is_callable($callable)) {
-        $app->$method(
+        $app->$httpMethod(
             $routeString,
             $callable
         );
