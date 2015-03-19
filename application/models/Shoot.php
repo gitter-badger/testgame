@@ -3,8 +3,8 @@
 
 namespace application\models;
 
-use application\components\AbsctractModel;
+use application\components\AbstractModel;
 
-class Shoot extends AbsctractModel {
+class Shoot extends AbstractModel {
     public static $_table = 'shoot';
 }

@@ -3,8 +3,8 @@
 
 namespace application\models;
 
-use application\components\AbsctractModel;
+use application\components\AbstractModel;
 
-class Player extends AbsctractModel {
+class Player extends AbstractModel {
     public static $_table = 'player';
 }

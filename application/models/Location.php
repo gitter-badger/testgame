@@ -3,8 +3,8 @@
 
 namespace application\models;
 
-use application\components\AbsctractModel;
+use application\components\AbstractModel;
 
-class Location extends AbsctractModel {
+class Location extends AbstractModel {
     public static $_table = 'location';
 }

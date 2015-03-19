@@ -4,6 +4,6 @@
 namespace application\components;
 
 
-abstract class AbsctractModel extends \Model{
+abstract class AbstractModel extends \Model{
 
 }
