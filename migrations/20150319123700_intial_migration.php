@@ -23,22 +23,19 @@ class IntialMigration extends AbstractMigration
     public function up()
     {
         $user = $this->table('player');
-        $user->addColumn('player_id', 'integer')
-            ->addColumn('name', 'string')
+        $user->addColumn('name', 'string')
             ->addColumn('password', 'string')
             ->create();
 
         $game = $this->table('game');
-        $game->addColumn('game_id', 'integer')
-            ->addColumn('created_at', 'datetime')
+        $game->addColumn('created_at', 'datetime')
             ->addColumn('p1_id', 'integer')
             ->addColumn('p2_id', 'integer')
             ->addColumn('state', 'enum', ['values' => ['active', 'finished'] ])
             ->create();
 
         $location = $this->table('location');
-        $location->addColumn('location_id', 'integer')
-            ->addColumn('game_id', 'integer')
+        $location->addColumn('game_id', 'integer')
             ->addColumn('player_id', 'integer')
             ->addColumn('ship_id', 'integer')
             ->addColumn('orientation', 'enum', ['values' => ['horizontal', 'vertical']])
@@ -47,14 +44,12 @@ class IntialMigration extends AbstractMigration
             ->create();
 
         $ship = $this->table('ship');
-        $ship->addColumn('ship_id', 'integer')
-            ->addColumn('name', 'string')
+        $ship->addColumn('name', 'string')
             ->addColumn('size', 'integer')
             ->create();
 
         $shoot = $this->table('shoot');
-        $shoot->addColumn('shoot_id', 'integer')
-            ->addColumn('game_id', 'integer')
+        $shoot->addColumn('game_id', 'integer')
             ->addColumn('player_id', 'integer')
             ->addColumn('datetime', 'datetime')
             ->addColumn('point', 'string')
