@@ -24,6 +24,7 @@ class IntialMigration extends AbstractMigration
     {
         $user = $this->table('player');
         $user->addColumn('name', 'string')
+            ->addColumn('email', 'string')
             ->addColumn('password', 'string')
             ->create();
 
