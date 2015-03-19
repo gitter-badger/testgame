@@ -10,12 +10,12 @@ class DatabaseConnector
     {
         $app = Slim::getInstance();
         \ORM::configure(
-            $app->config('dbDriver') . ':' .
-            $app->config('host') . '; ' .
-            $app->config('dbName')
+            $app->config('db.driver') . ':' .
+            $app->config('db.host') . '; ' .
+            $app->config('db.name')
         );
 
-        \ORM::configure('username', $app->config('dbUsername'));
-        \ORM::configure('password', $app->config('dbPassword'));
+        \ORM::configure('username', $app->config('db.username'));
+        \ORM::configure('password', $app->config('db.password'));
     }
 }

@@ -3,7 +3,8 @@
 
 namespace application\models;
 
+use application\components\AbsctractModel;
 
-class Ship extends \Model {
+class Ship extends AbsctractModel {
     public static $_table = 'ship';
 }
