@@ -1,6 +1,7 @@
 {
     "require": {
         "slim/slim": "~2.6",
-        "j4mie/paris": "dev-master"
+        "illuminate/database": "*",
+        "robmorgan/phinx": "*"
     }
 }
