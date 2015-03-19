@@ -7,7 +7,7 @@ abstract class BaseController
     /**
      * @var Slim
      */
-    private $app;
+    protected $app;
 
     /**
      * @var \Slim\Http\Request
