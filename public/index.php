@@ -14,9 +14,8 @@ $app = new \Slim\Slim($config);
 $routes = require APP_DIR . '/routes/routes.php';
 
 // Инжектим database
-$app->container->singleton('db', function(){
-    return new \application\components\DatabaseConnector();
-});
+$app->db = new \application\components\DatabaseConnector();
+
 
 // Регистрируем роуты. Ваще надо бы вынести в какой-нибудь Router
 foreach($routes as $route) {
