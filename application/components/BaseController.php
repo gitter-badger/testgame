@@ -40,4 +40,13 @@ abstract class BaseController
     {
         return $this->request;
     }
+
+    /**
+     * @param $key
+     * @param $value
+     */
+    public function setCookie($key, $value)
+    {
+        $this->app->response->setCookie($key, $value);
+    }
 }
