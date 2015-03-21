@@ -19,6 +19,7 @@ class GameController extends BaseController
         // создатель игры автоматически становится первым игроком
         $game->p1_id = $creator->id;
         $game->state = 'new';
+        $game->save();
 
         $this->setCookie('player', $creator->uniq);
         $this->sendJson($game);
