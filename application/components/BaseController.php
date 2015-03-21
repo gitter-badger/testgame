@@ -28,6 +28,8 @@ abstract class BaseController
     {
         $this->app->response->setStatus($statusCode);
 
+        $this->app->response->headers->set('Content-Type', 'application/json');
+
         $this->app->response->setBody(
             \json_encode($content)
         );
