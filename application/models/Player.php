@@ -12,6 +12,8 @@ use application\components\AbstractModel;
  * @property string $email
  * @property string $password
  * @property string $hui
+ * @property string $created_at
+ * @property string $updated_at
  */
 class Player extends AbstractModel
 {

@@ -10,6 +10,7 @@ use application\components\AbstractModel;
  * @property int $p1_id
  * @property int $p2_id
  * @property string $created_at
+ * @property string $updated_at
  * @property string $state
  * @property int $winner_id
  * @property string $uniq
