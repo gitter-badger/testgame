@@ -9,27 +9,29 @@ use Illuminate\Events\Dispatcher;
 
 class DatabaseConnector
 {
+    /**
+     * @var Capsule
+     */
     public $capsule;
-    public $app;
 
     public function __construct()
     {
-        $this->app = Slim::getInstance();
         $this->capsule = new Capsule();
         $this->initDb();
     }
 
     protected function initDb()
     {
+        $app = Slim::getInstance();
         $this->capsule->addConnection([
-            'driver'    => $this->app->config('db.driver'),
-            'host'      => $this->app->config('db.host'),
-            'database'  => $this->app->config('db.name'),
-            'username'  => $this->app->config('db.username'),
-            'password'  => $this->app->config('db.password'),
-            'charset'   => $this->app->config('db.charset'),
-            'collation' => $this->app->config('db.collation'),
-            'prefix'    => $this->app->config('db.prefix')
+            'driver'    => $app->config('db.driver'),
+            'host'      => $app->config('db.host'),
+            'database'  => $app->config('db.name'),
+            'username'  => $app->config('db.username'),
+            'password'  => $app->config('db.password'),
+            'charset'   => $app->config('db.charset'),
+            'collation' => $app->config('db.collation'),
+            'prefix'    => $app->config('db.prefix')
         ]);
 
         $this->capsule->setEventDispatcher(new Dispatcher( new Container()));
