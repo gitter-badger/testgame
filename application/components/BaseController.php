@@ -2,7 +2,7 @@
 namespace application\components;
 use Slim\Slim;
 
-abstract class BaseController
+class BaseController
 {
     /**
      * @var Slim
@@ -33,6 +33,11 @@ abstract class BaseController
         $this->app->response->setBody(
             \json_encode($content)
         );
+    }
+
+    public function send404()
+    {
+        $this->app->halt(404, 'Resource not found');
     }
 
     /**
