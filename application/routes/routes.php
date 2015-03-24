@@ -5,7 +5,7 @@ return [
     ['post', '/azaza', 'test', 'test'],
 
     ['post', '/game', 'game', 'create'],
-
+    ['post', '/location', 'location', 'create'],
 
     ['get', '/:model/:id', 'crud', 'showAction'],
     ['get', '/:model', 'crud', 'listAction'],

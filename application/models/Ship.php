@@ -14,5 +14,19 @@ class Ship extends AbstractModel
 {
     public $timestamps = false;
 
-    protected $table =  'ship';
+    protected $table = 'ship';
+
+    public static function getAllIndexed()
+    {
+        $shipModels = Ship::all();
+
+        $shipsIndexed = [];
+
+        foreach($shipModels as $object) {
+            $shipsIndexed[$object->id] = $object;
+        }
+
+
+        return $shipsIndexed;
+    }
 }

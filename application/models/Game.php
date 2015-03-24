@@ -15,9 +15,9 @@ use application\components\AbstractModel;
  * @property int $winner_id
  * @property string $uniq
  */
-class Game extends  AbstractModel
+class Game extends AbstractModel
 {
-    protected $table =  'game';
+    protected $table = 'game';
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany

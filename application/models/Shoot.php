@@ -15,5 +15,5 @@ use application\components\AbstractModel;
  * @property string $result
  */
 class Shoot extends AbstractModel {
-    protected $table =  'shoot';
+    protected $table = 'shoot';
 }
