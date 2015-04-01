@@ -2,7 +2,11 @@
 namespace application\components;
 use Slim\Slim;
 
-class BaseController
+/**
+ * Class BaseController
+ * @package application\components
+ */
+abstract class BaseController
 {
     /**
      * @var Slim
@@ -55,5 +59,13 @@ class BaseController
     public function setCookie($key, $value)
     {
         $this->app->response->setCookie($key, $value);
+    }
+
+    /**
+     * @return null|\Slim\Route
+     */
+    protected function getRoute()
+    {
+        return $this->app->router->getCurrentRoute();
     }
 }

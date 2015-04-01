@@ -1,13 +1,14 @@
 <?php
 return [
-    // method, route, controller, action
-    ['get', '/hello/:name', 'test', 'hello'],
-    ['post', '/azaza', 'test', 'test'],
+    // [ method, route, controller, action ]
 
     ['post', '/game', 'game', 'create'],
     ['post', '/location', 'location', 'create'],
 
-    ['get', '/:model/:id', 'crud', 'showAction'],
-    ['get', '/:model', 'crud', 'listAction'],
-    ['post', '/:model', 'crud', 'createAction'],
+    // CRUD routes (should be at the end)
+    ['get',     '/:model/:id',  'crud', 'showAction'],
+    ['get',     '/:model',      'crud', 'listAction'],
+    ['post',    '/:model',      'crud', 'createAction'],
+    ['delete',  '/:model/:id',  'crud', 'deleteAction'],
+    ['update',  '/:model/:id',  'crud', 'updateAction'],
 ];
