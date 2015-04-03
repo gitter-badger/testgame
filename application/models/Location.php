@@ -19,8 +19,8 @@ use application\components\AbstractModel;
 class Location extends AbstractModel
 {
     protected $table = 'location';
-
     public $timestamps = false;
+    protected $fillable = ['game_id', 'player_id', 'ship_id', 'orientation', 'state', 'x', 'y'];
 
     public function validate()
     {

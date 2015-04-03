@@ -3,7 +3,7 @@ return [
     // [ method, route, controller, action ]
 
     ['post', '/game', 'game', 'create'],
-    ['post', '/location', 'location', 'create'],
+    ['post', '/location', 'location', 'createAction'],
 
     // CRUD routes (should be at the end)
     ['get',     '/:model/:id',  'crud', 'showAction'],
