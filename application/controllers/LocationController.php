@@ -22,6 +22,7 @@ class LocationController extends BaseController
                 'player_id'   => $player->id,
                 'ship_id'     => $ship->ship_id,
                 'orientation' => $ship->orientation,
+                'state'       => 'full',
                 'x'           => $ship->x,
                 'y'           => $ship->y
             ]);
