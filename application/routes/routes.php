@@ -10,5 +10,5 @@ return [
     ['get',     '/:model',      'crud', 'listAction'],
     ['post',    '/:model',      'crud', 'createAction'],
     ['delete',  '/:model/:id',  'crud', 'deleteAction'],
-    ['update',  '/:model/:id',  'crud', 'updateAction'],
+    ['put',  '/:model/:id',  'crud', 'updateAction'],
 ];
